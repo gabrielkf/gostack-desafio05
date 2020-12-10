@@ -32,4 +32,8 @@ transactionRouter.post('/', (req, res) => {
   }
 });
 
+transactionRouter.get('/balance', (req, res) => {
+  return res.json(transactionsRepository.getBalance());
+});
+
 export default transactionRouter;
